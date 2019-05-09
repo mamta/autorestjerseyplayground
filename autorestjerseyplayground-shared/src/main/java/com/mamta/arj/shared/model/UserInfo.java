@@ -8,10 +8,12 @@ import jsinterop.annotations.JsType;
 public class UserInfo {
 
     @JsProperty
-    public native void setFirstName(String firstname);
+    public String firstName;
 
-    @JsProperty
-    public native String getFirstName();
+    // @JsProperty
+    // public native void setFirstName(String firstname);
+    //
+    // @JsProperty
+    // public native String getFirstName();
 
 }
-

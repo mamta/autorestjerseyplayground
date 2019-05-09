@@ -8,8 +8,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import io.reactivex.Observable;
-
 @Path("/UserInfoService")
 public class UserInfoService {
 
@@ -19,7 +17,7 @@ public class UserInfoService {
     public Response getResponseSingleUser1() {
 
         UserInfo userInfo = new UserInfo();
-        userInfo.setFirstName("Mamta");
+        //userInfo.setFirstName("Mamta");
 
         return Response.ok().entity(userInfo).build();
     }
