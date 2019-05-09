@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="autorestjerseyplayground">
+  <inherits name="com.google.gwt.user.User" />
+  <inherits name="com.google.gwt.user.theme.clean.Clean" />
+  <inherits name="com.intendia.gwt.autorest.AutoRest"/>
+  <inherits name="io.reactivex.RxJava"/>
+	
+
+  <source path="client" />
+  <source path="shared" />
+
+  <entry-point class="com.mamta.arj.client.App" />
+
+  <!-- Only support recent browsers -->
+  <set-property name="user.agent" value="ie10,gecko1_8,safari" />
+</module>
