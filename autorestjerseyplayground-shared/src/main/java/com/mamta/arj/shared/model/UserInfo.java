@@ -1,5 +1,6 @@
 package com.mamta.arj.shared.model;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -10,10 +11,9 @@ public class UserInfo {
     @JsProperty
     public String firstName;
 
-    // @JsProperty
-    // public native void setFirstName(String firstname);
-    //
-    // @JsProperty
-    // public native String getFirstName();
-
+    public static @JsOverlay UserInfo create(String firstName) {
+        UserInfo out = new UserInfo();
+        out.firstName = firstName;
+        return out;
+    }
 }

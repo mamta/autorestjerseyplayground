@@ -9,16 +9,14 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Path("/UserInfoService")
-public class UserInfoService {
+public class UserInfoServiceImpl {
 
     @GET
     @Path("/userinfo/singleuser")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getResponseSingleUser1() {
 
-        UserInfo userInfo = new UserInfo();
-        //userInfo.setFirstName("Mamta");
-
+        UserInfo userInfo = UserInfo.create("Max");
         return Response.ok().entity(userInfo).build();
     }
 

@@ -7,6 +7,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
 import io.reactivex.Observable;
+import io.reactivex.Single;
 
 @AutoRestGwt
 @Path("userinfo")
@@ -15,7 +16,7 @@ public interface UserInfoService {
 
     @GET
     @Path("/singleuser")
-    Observable<UserInfo> getUserInfo();
+    Single<UserInfo> getUserInfo();
 
     @GET
     @Path("/info")
