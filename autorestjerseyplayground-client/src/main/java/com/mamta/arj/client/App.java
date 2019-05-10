@@ -46,7 +46,7 @@ public class App implements EntryPoint {
         userInfoService.getUserInfo().subscribe(consumer -> {
 
             logger.info("User " + consumer);
-            // logger.info(consumer.getFirstName());
+            logger.info(consumer.firstName + consumer.addressInfo.streetName);
         });
 
     }

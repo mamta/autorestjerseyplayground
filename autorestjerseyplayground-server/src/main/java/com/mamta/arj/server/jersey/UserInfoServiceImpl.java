@@ -1,5 +1,6 @@
 package com.mamta.arj.server.jersey;
 
+import com.mamta.arj.shared.model.AddressInfo;
 import com.mamta.arj.shared.model.UserInfo;
 
 import javax.ws.rs.GET;
@@ -16,7 +17,8 @@ public class UserInfoServiceImpl {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getResponseSingleUser1() {
 
-        UserInfo userInfo = UserInfo.create("Max");
+        AddressInfo addressInfo = AddressInfo.create("Musterstreet");
+        UserInfo userInfo = UserInfo.create("Max", addressInfo);
         return Response.ok().entity(userInfo).build();
     }
 

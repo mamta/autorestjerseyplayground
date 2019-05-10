@@ -6,18 +6,15 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name = "Object", isNative = true)
-public class UserInfo {
+public class AddressInfo {
 
     @JsProperty
-    public String firstName;
+    public String streetName;
 
-    @JsProperty
-    public AddressInfo addressInfo;
-
-    public static @JsOverlay UserInfo create(String firstName, AddressInfo addressInfo) {
-        UserInfo out = new UserInfo();
-        out.firstName = firstName;
-        out.addressInfo = addressInfo;
+    public static @JsOverlay AddressInfo create(String streetName) {
+        AddressInfo out = new AddressInfo();
+        out.streetName = streetName;
         return out;
     }
 }
+
